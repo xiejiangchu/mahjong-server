@@ -15,6 +15,6 @@ public class UserService {
     private UserMapper userMapper;
 
     public User getFirstUser() {
-        return userMapper.selectByPrimaryKey(1);
+        return userMapper.selectById(1);
     }
 }
