@@ -2,8 +2,8 @@
 <Configuration status="off" monitorInterval="1800">
 
     <properties>
-        <property name="LOG_HOME">/logs/sample</property>
-        <property name="FILE_NAME">mylog</property>
+        <property name="LOG_HOME">${sys:catalina.home}/logs/mahjong</property>
+        <property name="FILE_NAME">log</property>
     </properties>
 
     <Appenders>
@@ -25,13 +25,10 @@
     </Appenders>
 
     <Loggers>
-        <!--<Logger name="com.test.app" level="trace" additivity="true">-->
-        <!--<AppenderRef ref="running-log"/>-->
+        <!--<Logger name="com.xie.mj" level="DEBUG" additivity="true">-->
+        <!--<AppenderRef ref="Console"/>-->
         <!--</Logger>-->
-        <Logger name="com.test.app.dao" level="DEBUG" additivity="true">
-            <AppenderRef ref="Console"/>
-        </Logger>
-        <Root level="error">
+        <Root level="DEBUG">
             <AppenderRef ref="Console"/>
         </Root>
     </Loggers>

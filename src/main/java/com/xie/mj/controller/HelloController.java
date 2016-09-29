@@ -17,14 +17,6 @@ public class HelloController {
     @Autowired
     private UserService userService;
 
-
-    @ResponseBody
-    @RequestMapping("/")
-    public String index() {
-
-        return userService.getEnv();
-    }
-
     @ResponseBody
     @RequestMapping("/hello")
     public User userIndex() {
